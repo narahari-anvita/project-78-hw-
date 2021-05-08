@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Family pic</title>
+</head>
+<link rel="stylesheet" href="style.css" />
+<link rel="main" href="main.js">
+
+<body>
+    <p id="img_change">Family Book</p>
+    <p>Each Picture represents 1 person in my family
+        <p>
+            <img id="album" src="Me.jpeg">
+            <div>
+                <button type="button" id="Next" onclick="nextpic()">Next</button>
+            </div>
+            <p id="reasontext"> "Anvita R Narahari(Me)"</p>
+            <script>
+                var reasons = [
+                    "Harshita Narahari(Older Sister)",
+                    "Devendar R Narahari(Dad)",
+                    "Kavitha Narahari(Mom)"
+                ];
+
+                var images = [
+                    "Sister.jpeg",
+                    "Dad.jpeg",
+                    "Mom.jpeg"
+                ];
+
+                var i = 0;
+
+                function nextpic() {
+                    document.getElementById("reasontext").innerHTML = reasons[i];
+                    document.getElementById("album").src = images[i];
+                    i++;
+                }
+            </script>
+</body>
+
+</html>
